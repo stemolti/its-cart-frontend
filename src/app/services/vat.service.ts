@@ -14,7 +14,3 @@ export class VatService {
   }
 
 }
-
-
-
-

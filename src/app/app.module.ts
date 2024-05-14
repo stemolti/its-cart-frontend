@@ -15,6 +15,13 @@ import { HttpClientModule } from '@angular/common/http';
 import { CheckoutComponent } from './pages/checkout/checkout.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ProductFiltersComponent } from './components/product-filters/product-filters.component';
+import { NavUserComponent } from './components/nav-user/nav-user.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { SideCartComponent } from './components/side-cart/side-cart.component';
+import { IfAuthenticatedDirective } from './directives/if-authenticated.directive';
+import { LoginComponent } from './pages/login/login.component';
+import { ProductContainerComponent } from './pages/product-container/product-container.component';
+import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
 registerLocaleData(localeIt);
 
 @NgModule({
@@ -25,7 +32,14 @@ registerLocaleData(localeIt);
     DiscountAmountPipe,
     CheckoutComponent,
     ProductsComponent,
-    ProductFiltersComponent
+    ProductFiltersComponent,
+    NavUserComponent,
+    ProductCardComponent,
+    SideCartComponent,
+    IfAuthenticatedDirective,
+    LoginComponent,
+    ProductContainerComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,

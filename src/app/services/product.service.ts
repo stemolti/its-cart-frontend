@@ -5,8 +5,8 @@ import { isNil, omitBy } from 'lodash';
 
 export interface ProductFilters {
   name?: string | null;
-  minPrice?: number  | null;
-  maxPrice?: number  | null;
+  minPrice?: number | null;
+  maxPrice?: number | null;
 }
 
 @Injectable({
@@ -15,11 +15,9 @@ export interface ProductFilters {
 export class ProductService {
 
   constructor(protected http: HttpClient) { }
-
   // Ritorna un observable di prodotti
   list(filters: ProductFilters) {
     const q = omitBy(filters, isNil);
     return this.http.get<Product[]>('/api/products', { params: q });
   }
 }
-
